@@ -1,0 +1,4 @@
+<div class="btn btn-succes">Przycisk</div>
+<a href="#" class="btn btn-success">Przycisk</a>
+<button class="btn btn-success">Przycisk</button>
+
