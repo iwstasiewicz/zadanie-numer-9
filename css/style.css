@@ -196,7 +196,7 @@ div.wrapper header nav.top ul li a span:hover {
   color: #fff;
 }
 
-div.wrapper aside {
+div.wrapper aside.desktop {
   background-color: red;
   position: fixed;
   top: 0;
@@ -209,7 +209,7 @@ div.wrapper aside {
   overflow: hidden;
 }
 
-div.wrapper aside nav.main h2 {
+div.wrapper aside.desktop nav.main h2 {
   padding: 15px 10px;
   font-size: 30px;
   color: #fff;
@@ -217,12 +217,12 @@ div.wrapper aside nav.main h2 {
   font-family: 'Schoolbell', cursive;
 }
 
-div.wrapper aside nav.main ul {
+div.wrapper aside.desktop nav.main ul {
   list-style: none;
   border-bottom: 1px solid #555;
 }
 
-div.wrapper aside nav.main ul li a {
+div.wrapper aside.desktop nav.main ul li a {
   display: block;
   text-decoration: none;
   color: #555;
@@ -232,26 +232,26 @@ div.wrapper aside nav.main ul li a {
   text-align: left;
 }
 
-div.wrapper aside nav.main ul li a div {
+div.wrapper aside.desktop nav.main ul li a div {
   display: inline-block;
   margin: 0 10px;
 }
 
-div.wrapper aside nav.main ul li a:hover {
+div.wrapper aside.desktop nav.main ul li a:hover {
   color: #fff;
 }
 
-div.wrapper aside nav.main ul li:hover {
+div.wrapper aside.desktop nav.main ul li:hover {
   background-color: #555;
   -webkit-box-shadow: 0 0 0 2px #df4b16;
           box-shadow: 0 0 0 2px #df4b16;
 }
 
-div.wrapper aside nav.main .manager {
+div.wrapper aside.desktop nav.main .manager {
   position: relative;
 }
 
-div.wrapper aside nav.main .manager h3 {
+div.wrapper aside.desktop nav.main .manager h3 {
   margin: 20px;
   color: #555;
   text-transform: uppercase;
@@ -259,7 +259,7 @@ div.wrapper aside nav.main .manager h3 {
   letter-spacing: 1px;
 }
 
-div.wrapper aside nav.main .manager .foto {
+div.wrapper aside.desktop nav.main .manager .foto {
   width: 70px;
   height: 70px;
   margin-left: 10px;
@@ -267,7 +267,7 @@ div.wrapper aside nav.main .manager .foto {
   border-radius: 50%;
 }
 
-div.wrapper aside nav.main .manager p {
+div.wrapper aside.desktop nav.main .manager p {
   position: absolute;
   font-size: 18px;
   color: #0F5BFF;
@@ -275,7 +275,7 @@ div.wrapper aside nav.main .manager p {
   left: 103px;
 }
 
-div.wrapper aside nav.main .manager p:hover {
+div.wrapper aside.desktop nav.main .manager p:hover {
   cursor: pointer;
   -webkit-box-shadow: 0 0 0 1px #0F5BFF;
           box-shadow: 0 0 0 1px #0F5BFF;
@@ -531,26 +531,16 @@ div.wrapper section.pages-wrapper section.links div.link-wrapper {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 80%;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 div.wrapper section.pages-wrapper section.links div.link-wrapper div {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   width: 100%;
   padding: 10px 5px;
   border-bottom: 1px solid #555;
 }
 
 div.wrapper section.pages-wrapper section.links div.link-wrapper div p {
-  -ms-flex-preferred-size: 30%;
-      flex-basis: 30%;
+  width: 30%;
   height: 60px;
   line-height: 60px;
   text-align: left;
@@ -558,8 +548,7 @@ div.wrapper section.pages-wrapper section.links div.link-wrapper div p {
 }
 
 div.wrapper section.pages-wrapper section.links div.link-wrapper div a {
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
+  width: 50%;
   height: 60px;
   line-height: 60px;
   text-decoration: none;
@@ -593,5 +582,55 @@ div.wrapper section.pages-wrapper section.links div.link-wrapper div:hover span 
 
 div.wrapper section.pages-wrapper section.links div.link-wrapper div:hover span:hover {
   color: #ff0000;
+}
+
+@media (min-width: 1025px) {
+  main.media {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  header {
+    display: none;
+  }
+  aside.desktop {
+    display: none;
+  }
+  main.media h2 {
+    padding: 0 30px;
+    text-align: center;
+    font-size: 40px;
+    line-height: 80px;
+    font-family: 'Schoolbell', cursive;
+    background-color: #444;
+    color: #fff;
+  }
+  main.media div.burger {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    border: 2px solid #fff;
+    color: #fff;
+    text-align: center;
+    line-height: 80px;
+    font-family: arial;
+    font-size: 30px;
+  }
+  main.media div.burger:hover {
+    cursor: pointer;
+  }
+  main.media aside.media-menu {
+    position: absolute;
+    top: 80px;
+    bottom: 0;
+    left: -300px;
+    width: 300px;
+    background-color: #000;
+    -webkit-transition: 0.3s linear;
+    transition: 0.3s linear;
+  }
 }
 /*# sourceMappingURL=style.css.map */

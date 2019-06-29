@@ -1,0 +1,62 @@
+@media (min-width: 1025px) {
+  main.media {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  header {
+    display: none;
+  }
+
+  aside.desktop {
+    display: none;
+  }
+
+  main.media {
+    h2 {
+      padding: 0 30px;
+      text-align: center;
+      font-size: 40px;
+      line-height: 80px;
+      font-family: 'Schoolbell', cursive;
+      background-color: #444;
+      color: #fff;
+    }
+
+    div.burger {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 80px;
+      height: 80px;
+      border: 2px solid #fff;
+      color: #fff;
+      text-align: center;
+      line-height: 80px;
+      font-family: arial;
+      font-size: 30px;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      // &.active:hover+aside.media-menu {
+      //   left: 0;
+      // }
+
+
+    }
+
+    aside.media-menu {
+      position: absolute;
+      top: 80px;
+      bottom: 0;
+      left: -300px;
+      width: 300px;
+      background-color: #000;
+      transition: 0.3s linear;
+    }
+  }
+
+}
