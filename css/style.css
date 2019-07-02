@@ -140,7 +140,7 @@ body {
   clear: both;
 }
 
-.row, div.wrapper section.pages-wrapper section.general div.row, div.wrapper section.pages-wrapper section.general div.statistic, div.wrapper section.pages-wrapper section.general div.statistic div, div.wrapper section.pages-wrapper section.details div.row {
+.row, div.wrapper section.pages-wrapper section.general div.row, div.wrapper section.pages-wrapper section.general div.statistic.row, div.wrapper section.pages-wrapper section.general div.statistic.row div, div.wrapper section.pages-wrapper section.details div.row {
   display: -ms-grid;
   display: grid;
 }
@@ -306,7 +306,7 @@ div.wrapper section.pages-wrapper section.general h1.title {
   border-bottom: 1px solid #555;
 }
 
-div.wrapper section.pages-wrapper section.general div.row, div.wrapper section.pages-wrapper section.general div.statistic, div.wrapper section.pages-wrapper section.general div.statistic div {
+div.wrapper section.pages-wrapper section.general div.row, div.wrapper section.pages-wrapper section.general div.statistic.row, div.wrapper section.pages-wrapper section.general div.statistic.row div {
   -ms-grid-columns: 1fr 1fr 80px;
       grid-template-columns: 1fr 1fr 80px;
   -ms-grid-rows: 1fr;
@@ -315,35 +315,35 @@ div.wrapper section.pages-wrapper section.general div.row, div.wrapper section.p
   margin: 30px 250px;
 }
 
-div.wrapper section.pages-wrapper section.general div.row button.date, div.wrapper section.pages-wrapper section.general div.statistic button.date {
+div.wrapper section.pages-wrapper section.general div.row button.date {
   padding: 20px;
   font-size: 18px;
   border: 1px solid #555;
 }
 
-div.wrapper section.pages-wrapper section.general div.row button.date span.icon-calendar, div.wrapper section.pages-wrapper section.general div.statistic button.date span.icon-calendar {
+div.wrapper section.pages-wrapper section.general div.row button.date span.icon-calendar {
   margin-left: 100px;
 }
 
-div.wrapper section.pages-wrapper section.general div.row button.date:hover, div.wrapper section.pages-wrapper section.general div.statistic button.date:hover {
+div.wrapper section.pages-wrapper section.general div.row button.date:hover {
   cursor: pointer;
 }
 
-div.wrapper section.pages-wrapper section.general div.row button.refresh, div.wrapper section.pages-wrapper section.general div.statistic button.refresh {
+div.wrapper section.pages-wrapper section.general div.row button.refresh {
   background-color: #ff0000;
   border: 1px solid #555;
 }
 
-div.wrapper section.pages-wrapper section.general div.row button.refresh span.icon-refresh, div.wrapper section.pages-wrapper section.general div.statistic button.refresh span.icon-refresh {
+div.wrapper section.pages-wrapper section.general div.row button.refresh span.icon-refresh {
   font-size: 18px;
   color: #fff;
 }
 
-div.wrapper section.pages-wrapper section.general div.row button.refresh:hover, div.wrapper section.pages-wrapper section.general div.statistic button.refresh:hover {
+div.wrapper section.pages-wrapper section.general div.row button.refresh:hover {
   cursor: pointer;
 }
 
-div.wrapper section.pages-wrapper section.general div.statistic {
+div.wrapper section.pages-wrapper section.general div.statistic.row, div.wrapper section.pages-wrapper section.general div.statistic.row div.statistic {
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: 1fr 1fr;
@@ -352,7 +352,7 @@ div.wrapper section.pages-wrapper section.general div.statistic {
   background-color: #fff;
 }
 
-div.wrapper section.pages-wrapper section.general div.statistic div {
+div.wrapper section.pages-wrapper section.general div.statistic.row div {
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   -ms-grid-rows: 1fr;
@@ -363,16 +363,20 @@ div.wrapper section.pages-wrapper section.general div.statistic div {
   text-align: left;
 }
 
-div.wrapper section.pages-wrapper section.general div.statistic div p {
+div.wrapper section.pages-wrapper section.general div.statistic.row div p {
   text-align: left;
   border-bottom: 1px solid #ccc;
   line-height: 200%;
 }
 
-div.wrapper section.pages-wrapper section.general div.statistic div span {
+div.wrapper section.pages-wrapper section.general div.statistic.row div span {
   text-align: right;
   border-bottom: 1px solid #ccc;
   line-height: 200%;
+}
+
+div.wrapper section.pages-wrapper section.general div.statistic.flex, div.wrapper section.pages-wrapper section.general section.links div.statistic.link-wrapper, div.wrapper section.pages-wrapper section.links section.general div.statistic.link-wrapper, div.wrapper section.pages-wrapper section.general section.links div.link-wrapper div.statistic, div.wrapper section.pages-wrapper section.links div.link-wrapper section.general div.statistic {
+  display: none;
 }
 
 div.wrapper section.pages-wrapper section.general h3.title-chart {
@@ -401,7 +405,7 @@ div.wrapper section.pages-wrapper section.details h1.title {
   border-bottom: 1px solid #555;
 }
 
-div.wrapper section.pages-wrapper section.details section.general div.statistic, div.wrapper section.pages-wrapper section.general section.details div.statistic, div.wrapper section.pages-wrapper section.details section.general div.statistic div, div.wrapper section.pages-wrapper section.general div.statistic section.details div, div.wrapper section.pages-wrapper section.details div.row {
+div.wrapper section.pages-wrapper section.details section.general div.statistic.row, div.wrapper section.pages-wrapper section.general section.details div.statistic.row, div.wrapper section.pages-wrapper section.details section.general div.statistic.row div, div.wrapper section.pages-wrapper section.general div.statistic.row section.details div, div.wrapper section.pages-wrapper section.details div.row {
   -ms-grid-columns: 1fr 1fr 80px;
       grid-template-columns: 1fr 1fr 80px;
   -ms-grid-rows: 1fr;
@@ -410,31 +414,31 @@ div.wrapper section.pages-wrapper section.details section.general div.statistic,
   margin: 30px 250px;
 }
 
-div.wrapper section.pages-wrapper section.details section.general div.statistic button.date, div.wrapper section.pages-wrapper section.general section.details div.statistic button.date, div.wrapper section.pages-wrapper section.general div.statistic section.details div button.date, div.wrapper section.pages-wrapper section.details div.row button.date {
+div.wrapper section.pages-wrapper section.general div.statistic.row section.details div button.date, div.wrapper section.pages-wrapper section.details div.row button.date {
   padding: 20px;
   font-size: 18px;
   border: 1px solid #555;
 }
 
-div.wrapper section.pages-wrapper section.details section.general div.statistic button.date span.icon-calendar, div.wrapper section.pages-wrapper section.general section.details div.statistic button.date span.icon-calendar, div.wrapper section.pages-wrapper section.general div.statistic section.details div button.date span.icon-calendar, div.wrapper section.pages-wrapper section.details div.row button.date span.icon-calendar {
+div.wrapper section.pages-wrapper section.general div.statistic.row section.details div button.date span.icon-calendar, div.wrapper section.pages-wrapper section.details div.row button.date span.icon-calendar {
   margin-left: 100px;
 }
 
-div.wrapper section.pages-wrapper section.details section.general div.statistic button.date:hover, div.wrapper section.pages-wrapper section.general section.details div.statistic button.date:hover, div.wrapper section.pages-wrapper section.general div.statistic section.details div button.date:hover, div.wrapper section.pages-wrapper section.details div.row button.date:hover {
+div.wrapper section.pages-wrapper section.general div.statistic.row section.details div button.date:hover, div.wrapper section.pages-wrapper section.details div.row button.date:hover {
   cursor: pointer;
 }
 
-div.wrapper section.pages-wrapper section.details section.general div.statistic button.refresh, div.wrapper section.pages-wrapper section.general section.details div.statistic button.refresh, div.wrapper section.pages-wrapper section.general div.statistic section.details div button.refresh, div.wrapper section.pages-wrapper section.details div.row button.refresh {
+div.wrapper section.pages-wrapper section.general div.statistic.row section.details div button.refresh, div.wrapper section.pages-wrapper section.details div.row button.refresh {
   background-color: #ff0000;
   border: 1px solid #555;
 }
 
-div.wrapper section.pages-wrapper section.details section.general div.statistic button.refresh span.icon-refresh, div.wrapper section.pages-wrapper section.general section.details div.statistic button.refresh span.icon-refresh, div.wrapper section.pages-wrapper section.general div.statistic section.details div button.refresh span.icon-refresh, div.wrapper section.pages-wrapper section.details div.row button.refresh span.icon-refresh {
+div.wrapper section.pages-wrapper section.general div.statistic.row section.details div button.refresh span.icon-refresh, div.wrapper section.pages-wrapper section.details div.row button.refresh span.icon-refresh {
   font-size: 18px;
   color: #fff;
 }
 
-div.wrapper section.pages-wrapper section.details section.general div.statistic button.refresh:hover, div.wrapper section.pages-wrapper section.general section.details div.statistic button.refresh:hover, div.wrapper section.pages-wrapper section.general div.statistic section.details div button.refresh:hover, div.wrapper section.pages-wrapper section.details div.row button.refresh:hover {
+div.wrapper section.pages-wrapper section.general div.statistic.row section.details div button.refresh:hover, div.wrapper section.pages-wrapper section.details div.row button.refresh:hover {
   cursor: pointer;
 }
 
@@ -591,13 +595,19 @@ div.wrapper section.pages-wrapper section.links div.link-wrapper div:hover span:
 }
 
 @media (max-width: 1024px) {
-  header {
+  div.wrapper {
+    max-width: 1024px;
+    width: 100%;
+    overflow: hidden;
+  }
+  div.wrapper header {
     display: none;
   }
-  aside.desktop {
+  div.wrapper aside.desktop {
     display: none;
   }
-  main.media h2 {
+  div.wrapper main.media h2 {
+    width: 100%;
     padding: 0 30px;
     text-align: center;
     font-size: 40px;
@@ -606,31 +616,149 @@ div.wrapper section.pages-wrapper section.links div.link-wrapper div:hover span:
     background-color: #444;
     color: #fff;
   }
-  main.media div.burger {
+  div.wrapper main.media div.burger {
     position: fixed;
     top: 0;
     left: 0;
     width: 80px;
     height: 80px;
-    border: 2px solid #fff;
-    color: #fff;
+    color: #ddd;
     text-align: center;
     line-height: 80px;
-    font-family: arial;
-    font-size: 30px;
+    font-size: 40px;
+    z-index: 1;
   }
-  main.media div.burger:hover {
-    cursor: pointer;
+  div.wrapper main.media div.burger.active + aside.media-menu {
+    left: 0;
   }
-  main.media aside.media-menu {
+  div.wrapper main.media aside.media-menu {
     position: absolute;
     top: 80px;
     bottom: 0;
-    left: -300px;
-    width: 300px;
+    left: -250px;
+    width: 250px;
     background-color: #000;
-    -webkit-transition: 0.3s linear;
-    transition: 0.3s linear;
+    -webkit-transition: 0.2s linear;
+    transition: 0.2s linear;
+  }
+  div.wrapper main.media aside.media-menu nav.media-nav ul {
+    list-style: none;
+  }
+  div.wrapper main.media aside.media-menu nav.media-nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: #eee;
+    font-size: 20px;
+    padding: 20px 15px;
+    font-family: "Open Sans", "Roboto", Arial;
+    text-align: left;
+  }
+  div.wrapper main.media aside.media-menu nav.media-nav ul li a div {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  div.wrapper main.media aside.media-menu nav.media-nav .manager {
+    position: relative;
+  }
+  div.wrapper main.media aside.media-menu nav.media-nav .manager .foto {
+    width: 100px;
+    height: 80px;
+    margin: 10px auto;
+    background-color: #777;
+    border-radius: 30%;
+  }
+  div.wrapper main.media aside.media-menu nav.media-nav .manager span.icon-message {
+    position: absolute;
+    top: 0;
+    left: 30px;
+    color: #0af329;
+    font-size: 40px;
+  }
+  div.wrapper main.media aside.media-menu nav.log {
+    margin-top: 20px;
+  }
+  div.wrapper main.media aside.media-menu nav.log ul {
+    list-style: none;
+  }
+  div.wrapper main.media aside.media-menu nav.log ul li {
+    display: inline-block;
+    font-size: 0;
+  }
+  div.wrapper main.media aside.media-menu nav.log ul li a {
+    display: block;
+    padding: 10px 0;
+    width: 57px;
+    text-align: center;
+  }
+  div.wrapper main.media aside.media-menu nav.log ul li a span {
+    font-size: 24px;
+    color: #eee;
+  }
+  div.wrapper section.pages-wrapper {
+    width: 100%;
+    margin: 0;
+  }
+  div.wrapper section.pages-wrapper section.general {
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px 0;
+  }
+  div.wrapper section.pages-wrapper section.general div.row, div.wrapper section.pages-wrapper section.general div.statistic.row, div.wrapper section.pages-wrapper section.general div.statistic.row div {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 60px;
+        grid-template-columns: 1fr 1fr 60px;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    text-align: center;
+    margin: 30px 200px;
+  }
+  div.wrapper section.pages-wrapper section.general div.row button.date {
+    padding: 10px 0;
+  }
+  div.wrapper section.pages-wrapper section.general div.row button.date span.icon-calendar {
+    margin-left: 20px;
+  }
+  div.wrapper section.pages-wrapper section.general div.statistic.row, div.wrapper section.pages-wrapper section.general div.statistic.row div.statistic {
+    display: none;
+  }
+  div.wrapper section.pages-wrapper section.general div.statistic.flex, div.wrapper section.pages-wrapper section.general section.links div.statistic.link-wrapper, div.wrapper section.pages-wrapper section.links section.general div.statistic.link-wrapper, div.wrapper section.pages-wrapper section.general section.links div.link-wrapper div.statistic, div.wrapper section.pages-wrapper section.links div.link-wrapper section.general div.statistic {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 80%;
+    background-color: red;
+  }
+  div.wrapper section.pages-wrapper section.general div.statistic.flex div, div.wrapper section.pages-wrapper section.general section.links div.statistic.link-wrapper div, div.wrapper section.pages-wrapper section.links section.general div.statistic.link-wrapper div, div.wrapper section.pages-wrapper section.general section.links div.link-wrapper div.statistic div, div.wrapper section.pages-wrapper section.links div.link-wrapper section.general div.statistic div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  div.wrapper section.pages-wrapper section.general h3.title-chart {
+    text-align: center;
+    font-size: 19px;
+  }
+  div.wrapper section.pages-wrapper section.general div.chart {
+    margin: 10px auto;
+    width: 70%;
+  }
+  div.wrapper section.pages-wrapper section.general div.chart img {
+    display: block;
+    width: 100%;
+  }
+  div.wrapper section.pages-wrapper section.details {
+    display: none;
+  }
+  div.wrapper section.pages-wrapper section.links {
+    padding: 30px 0;
+  }
+  div.wrapper section.pages-wrapper section.links div.link-wrapper div span {
+    display: block;
+    font-size: 25px;
   }
 }
 /*# sourceMappingURL=style.css.map */
