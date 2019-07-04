@@ -659,6 +659,7 @@ div.wrapper section.pages-wrapper section.links div.link-wrapper div:hover span:
   }
   div.wrapper main.media aside.media-menu nav.media-nav .manager {
     position: relative;
+    margin-top: 50px;
   }
   div.wrapper main.media aside.media-menu nav.media-nav .manager .foto {
     width: 100px;
@@ -675,7 +676,7 @@ div.wrapper section.pages-wrapper section.links div.link-wrapper div:hover span:
     font-size: 40px;
   }
   div.wrapper main.media aside.media-menu nav.log {
-    margin-top: 20px;
+    margin-top: 50px;
   }
   div.wrapper main.media aside.media-menu nav.log ul {
     list-style: none;
@@ -730,21 +731,44 @@ div.wrapper section.pages-wrapper section.links div.link-wrapper div:hover span:
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 80%;
-    background-color: red;
+    width: 60%;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    margin: 60px auto;
+    font-size: 23px;
+    font-family: "Open Sans", "Roboto", Arial;
   }
   div.wrapper section.pages-wrapper section.general div.statistic.flex div, div.wrapper section.pages-wrapper section.general section.links div.statistic.link-wrapper div, div.wrapper section.pages-wrapper section.links section.general div.statistic.link-wrapper div, div.wrapper section.pages-wrapper section.general section.links div.link-wrapper div.statistic div, div.wrapper section.pages-wrapper section.links div.link-wrapper section.general div.statistic div {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    height: 60px;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    border-bottom: 1px solid #555;
+  }
+  div.wrapper section.pages-wrapper section.general div.statistic.flex div p, div.wrapper section.pages-wrapper section.general section.links div.statistic.link-wrapper div p, div.wrapper section.pages-wrapper section.links section.general div.statistic.link-wrapper div p, div.wrapper section.pages-wrapper section.general section.links div.link-wrapper div.statistic div p, div.wrapper section.pages-wrapper section.links div.link-wrapper section.general div.statistic div p {
+    -ms-flex-preferred-size: 70%;
+        flex-basis: 70%;
+    line-height: 60px;
+    padding: 5px 15px;
+  }
+  div.wrapper section.pages-wrapper section.general div.statistic.flex div span, div.wrapper section.pages-wrapper section.general section.links div.statistic.link-wrapper div span, div.wrapper section.pages-wrapper section.links section.general div.statistic.link-wrapper div span, div.wrapper section.pages-wrapper section.general section.links div.link-wrapper div.statistic div span, div.wrapper section.pages-wrapper section.links div.link-wrapper section.general div.statistic div span {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    line-height: 60px;
+    padding: 5px 15px;
+    text-align: right;
   }
   div.wrapper section.pages-wrapper section.general h3.title-chart {
     text-align: center;
     font-size: 19px;
   }
   div.wrapper section.pages-wrapper section.general div.chart {
-    margin: 10px auto;
-    width: 70%;
+    height: auto;
+    margin: 30px auto 0;
+    width: 100%;
   }
   div.wrapper section.pages-wrapper section.general div.chart img {
     display: block;
@@ -759,6 +783,118 @@ div.wrapper section.pages-wrapper section.links div.link-wrapper div:hover span:
   div.wrapper section.pages-wrapper section.links div.link-wrapper div span {
     display: block;
     font-size: 25px;
+  }
+}
+
+@media (max-width: 736px) {
+  div.wrapper {
+    max-width: 736px;
+  }
+  div.wrapper main.media h2 {
+    font-size: 32px;
+    height: 50px;
+    line-height: 50px;
+  }
+  div.wrapper main.media div.burger {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+  }
+  div.wrapper main.media div.burger.active + aside.media-menu {
+    left: 0;
+  }
+  div.wrapper main.media aside.media-menu {
+    position: absolute;
+    top: 50px;
+    left: -350px;
+    width: 350px;
+  }
+  div.wrapper main.media aside.media-menu nav.media-nav ul li a {
+    font-size: 25px;
+    padding: 30px 30px;
+  }
+  div.wrapper main.media aside.media-menu nav.media-nav ul li a div {
+    margin: 0 20px;
+  }
+  div.wrapper main.media aside.media-menu nav.media-nav .manager .foto {
+    width: 120px;
+    height: 90px;
+  }
+  div.wrapper main.media aside.media-menu nav.media-nav .manager span.icon-message {
+    left: 70px;
+  }
+  div.wrapper main.media aside.media-menu nav.log {
+    margin-top: 60px;
+  }
+  div.wrapper main.media aside.media-menu nav.log ul {
+    list-style: none;
+  }
+  div.wrapper main.media aside.media-menu nav.log ul li {
+    width: 23%;
+  }
+  div.wrapper main.media aside.media-menu nav.log ul li a span {
+    font-size: 30px;
+  }
+  div.wrapper section.pages-wrapper section.general div.row, div.wrapper section.pages-wrapper section.general div.statistic.row, div.wrapper section.pages-wrapper section.general div.statistic.row div {
+    -ms-grid-columns: 1fr 1fr 150px;
+        grid-template-columns: 1fr 1fr 150px;
+    margin: 30px 100px;
+  }
+}
+
+@media (max-width: 640px) {
+  div.wrapper {
+    max-width: 640px;
+  }
+  div.wrapper section.pages-wrapper section.general div.row, div.wrapper section.pages-wrapper section.general div.statistic.row, div.wrapper section.pages-wrapper section.general div.statistic.row div {
+    -ms-grid-columns: 1fr 1fr 100px;
+        grid-template-columns: 1fr 1fr 100px;
+    margin: 30px 60px;
+  }
+  div.wrapper section.pages-wrapper section.general h3.title-chart {
+    font-size: 20px;
+  }
+}
+
+@media (orientation: portrait) and (max-width: 420px) {
+  div.wrapper section.pages-wrapper section.general div.row, div.wrapper section.pages-wrapper section.general div.statistic.row, div.wrapper section.pages-wrapper section.general div.statistic.row div {
+    -ms-grid-columns: 1fr 1fr 70px;
+        grid-template-columns: 1fr 1fr 70px;
+    margin: 30px 10px;
+  }
+  div.wrapper section.pages-wrapper section.general div.row button.date {
+    padding: 15px 0;
+  }
+  div.wrapper section.pages-wrapper section.general div.row button.date span.icon-calendar {
+    display: none;
+  }
+  div.wrapper section.pages-wrapper section.general div.statistic.flex, div.wrapper section.pages-wrapper section.general section.links div.statistic.link-wrapper, div.wrapper section.pages-wrapper section.links section.general div.statistic.link-wrapper, div.wrapper section.pages-wrapper section.general section.links div.link-wrapper div.statistic, div.wrapper section.pages-wrapper section.links div.link-wrapper section.general div.statistic {
+    width: 90%;
+    margin: 40px auto;
+    font-size: 20px;
+  }
+  div.wrapper section.pages-wrapper section.general div.statistic.flex div, div.wrapper section.pages-wrapper section.general section.links div.statistic.link-wrapper div, div.wrapper section.pages-wrapper section.links section.general div.statistic.link-wrapper div, div.wrapper section.pages-wrapper section.general section.links div.link-wrapper div.statistic div, div.wrapper section.pages-wrapper section.links div.link-wrapper section.general div.statistic div {
+    height: 45px;
+  }
+  div.wrapper section.pages-wrapper section.details {
+    display: none;
+  }
+  div.wrapper section.pages-wrapper section.links div.link-wrapper div.flex p, div.wrapper section.pages-wrapper section.links div.link-wrapper div.link-wrapper p, div.wrapper section.pages-wrapper section.links div.link-wrapper div p {
+    display: none;
+  }
+  div.wrapper section.pages-wrapper section.links div.link-wrapper div.flex a, div.wrapper section.pages-wrapper section.links div.link-wrapper div.link-wrapper a, div.wrapper section.pages-wrapper section.links div.link-wrapper div a {
+    display: block;
+    -webkit-box-flex: 3;
+        -ms-flex-positive: 3;
+            flex-grow: 3;
+    text-align: left;
+  }
+  div.wrapper section.pages-wrapper section.links div.link-wrapper div.flex span, div.wrapper section.pages-wrapper section.links div.link-wrapper div.link-wrapper span, div.wrapper section.pages-wrapper section.links div.link-wrapper div span {
+    display: block;
+    font-size: 20px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
   }
 }
 /*# sourceMappingURL=style.css.map */
